@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div class="row">
+    <h4>Movies Now Playing</h4>
+    <div *ngFor="let list of playingMovieList">
+        <img src="{{ list.posterURL }}" alt="{{ list.title }}">
+        <h3>{{ list.title }}</h3>
+        <p>Release Date: {{ list.releaseDate }} </p>
+        <p>RunTime: {{ list.runTime }}</p>
+        <p>Rating: {{ list.rating }}</p>
+    </div>
+</div>
