@@ -1,3 +1,8 @@
+import { Cast } from '../class/cast';
+import { Writer } from '../class/writer';
+import { Director } from '../class/director';
+import { Genre } from '../class/genre';
+
 export class Movie {
     id: number;
     title: string;
@@ -6,4 +11,8 @@ export class Movie {
     runTime: string;
     rating: string;
     posterURL: string;
+    castList: Cast[];
+    genreList: Genre[];
+    directorName: Director[];
+    writerName: Writer[];
 }
