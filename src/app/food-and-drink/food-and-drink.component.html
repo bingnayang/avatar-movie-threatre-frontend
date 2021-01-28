@@ -1,1 +1,5 @@
-<p>food-and-drink works!</p>
+<div *ngFor="let item of foodAndDrink">
+    <img src="{{ item.image_url }}" alt="{{ item.name }}">
+    <p>{{ item.name }}</p>
+    <p>{{ item.summary }}</p>
+</div>
