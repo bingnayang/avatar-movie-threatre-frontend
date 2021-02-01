@@ -1,8 +1,23 @@
-<div *ngFor="let movie of movieShowList">
-    <h5>{{ movie.title }}</h5>
-    <p>{{ movie.runTime }} | {{ movie.rating }}</p>
-
-    <p *ngFor="let movieTime of movie.showTime; index as i">
-        {{ movie.showTime[i]["startTime"] }}
-    </p>
+<div class="container">
+    <div *ngFor="let movie of movieShowList">
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ movie.title }}</span>
+                        <p>{{ movie.runTime }} | {{ movie.rating }}</p>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <div *ngFor="let movieTime of movie.showTime; index as i">
+                                <div class="col s12 m6 l3">
+                                    <a class="waves-effect waves-light btn blue accent-2">{{ movie.showTime[i]["startTime"] }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
