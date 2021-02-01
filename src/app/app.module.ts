@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodAndDrinkComponent } from './food-and-drink/food-and-drink.component';
 import { ShowtimeComponent } from './showtime/showtime.component';
+import { SeeAMovieComponent } from './see-a-movie/see-a-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FoodAndDrinkComponent,
-    ShowtimeComponent
+    ShowtimeComponent,
+    SeeAMovieComponent
   ],
   imports: [
     BrowserModule,
