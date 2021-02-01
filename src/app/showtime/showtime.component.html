@@ -1,1 +1,8 @@
-<p>showtime works!</p>
+<div *ngFor="let movie of movieShowList">
+    <h5>{{ movie.title }}</h5>
+    <p>{{ movie.runTime }} | {{ movie.rating }}</p>
+
+    <p *ngFor="let movieTime of movie.showTime; index as i">
+        {{ movie.showTime[i]["startTime"] }}
+    </p>
+</div>
