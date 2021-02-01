@@ -1,1 +1,7 @@
-<p>see-a-movie works!</p>
+<div *ngFor="let movie of movieList">
+    <img src="{{ movie.posterURL }}" alt="{{ movie.title }}">
+    <h5>{{ movie.title }}</h5>
+    <p>{{ movie.runTime }} | {{ movie.rating }}</p>
+    <button>Get Tickets</button>
+    <button>Movie Info</button>
+</div>
