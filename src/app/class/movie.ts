@@ -2,6 +2,7 @@ import { Cast } from '../class/cast';
 import { Writer } from '../class/writer';
 import { Director } from '../class/director';
 import { Genre } from '../class/genre';
+import { Showtime } from '../class/showtime';
 
 export class Movie {
     id: number;
@@ -15,4 +16,5 @@ export class Movie {
     genreList: Genre[];
     directorName: Director[];
     writerName: Writer[];
+    showTime: Showtime[];
 }
