@@ -1,7 +1,21 @@
-<div *ngFor="let movie of movieList">
-    <img src="{{ movie.posterURL }}" alt="{{ movie.title }}">
-    <h5>{{ movie.title }}</h5>
-    <p>{{ movie.runTime }} | {{ movie.rating }}</p>
-    <button>Get Tickets</button>
-    <button>Movie Info</button>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let movie of movieList">
+            <div class="col s12 m4 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ movie.posterURL }}" alt="{{ movie.title }}">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">{{ movie.title }}</h4>
+                        <p>{{ movie.runTime }} | {{ movie.rating }}</p>
+                    </div>
+                    <div class="card-action">
+                        <button>Get Tickets</button>
+                        <button>Movie Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
