@@ -11,8 +11,8 @@
                         <p>{{ movie.runTime }} | {{ movie.rating }}</p>
                     </div>
                     <div class="card-action">
-                        <button>Get Tickets</button>
-                        <button>Movie Info</button>
+                        <a class="waves-effect waves-light btn-small">Get Tickets</a>
+                        <a class="waves-effect waves-light btn-small" (click)="viewMovieDetail(movie.id)">Movie Info</a>
                     </div>
                 </div>
             </div>

@@ -22,4 +22,8 @@ export class SeeAMovieComponent implements OnInit {
       console.log(this.movieList);
     }, error => console.log(error));
   }
+
+  viewMovieDetail(id: number){
+    console.log(id)
+  }
 }
