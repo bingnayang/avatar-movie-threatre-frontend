@@ -9,6 +9,7 @@ import { FoodAndDrinkComponent } from './food-and-drink/food-and-drink.component
 import { ShowtimeComponent } from './showtime/showtime.component';
 import { SeeAMovieComponent } from './see-a-movie/see-a-movie.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieInfoComponent } from './movie-info/movie-info.component';
     FoodAndDrinkComponent,
     ShowtimeComponent,
     SeeAMovieComponent,
-    MovieInfoComponent
+    MovieInfoComponent,
+    ShowtimeByMovieComponent
   ],
   imports: [
     BrowserModule,
