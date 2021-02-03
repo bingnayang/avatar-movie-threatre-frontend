@@ -14,4 +14,8 @@ export class MovieService {
   getPlayingMovieList(): Observable<Movie[]>{
     return this.httpClient.get<Movie[]>(`${this.baseURL}`);
   }
+
+  getMovieById(id: number): Observable<Movie>{
+    return this.httpClient.get<Movie>(`${this.baseURL}/${id}`)
+  }
 }
