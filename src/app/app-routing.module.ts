@@ -4,6 +4,7 @@ import { FoodAndDrinkComponent } from './food-and-drink/food-and-drink.component
 import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { SeeAMovieComponent } from './see-a-movie/see-a-movie.component';
+import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.component';
 import { ShowtimeComponent } from './showtime/showtime.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'showtime', component: ShowtimeComponent},
   {path: 'see-a-movie', component: SeeAMovieComponent},
   {path: 'movie-info/:id', component: MovieInfoComponent},
+  {path: 'showtime-by-movie', component: ShowtimeByMovieComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'}
 ];
 
