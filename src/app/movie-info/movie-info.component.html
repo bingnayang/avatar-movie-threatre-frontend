@@ -10,6 +10,9 @@
             <div *ngFor="let genre of movieDetail.genreList">
                 <li>{{ genre.genre_name }}</li>
             </div>
+            <div>
+                <a class="waves-effect waves-light btn-large" (click)="viewMovieShowTime(movieDetail.id)">Get Ticket</a>
+            </div>
         </div>
     </div>
     <div class="row">
