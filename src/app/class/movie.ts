@@ -12,6 +12,7 @@ export class Movie {
     runTime: string;
     rating: string;
     posterURL: string;
+    auditorium: string;
     castList: Cast[];
     genreList: Genre[];
     directorName: Director[];
