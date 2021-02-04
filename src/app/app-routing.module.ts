@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'showtime', component: ShowtimeComponent},
   {path: 'see-a-movie', component: SeeAMovieComponent},
   {path: 'movie-info/:id', component: MovieInfoComponent},
-  {path: 'showtime-by-movie', component: ShowtimeByMovieComponent},
+  {path: 'showtime-by-movie/:id', component: ShowtimeByMovieComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'}
 ];
 
