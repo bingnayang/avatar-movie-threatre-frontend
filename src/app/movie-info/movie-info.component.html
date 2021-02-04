@@ -1,1 +1,49 @@
-<p>movie-info works!</p>
+<div class="container">
+    <h4>{{ movieDetail.title }}</h4>
+    <div class="row">
+        <div class="col s4">
+            <img class="materialboxed" width="350" src="{{ movieDetail.posterURL }}">
+        </div>
+        <div class="col s8">
+            <p>{{ movieDetail.runTime }} | {{ movieDetail.rating }}</p>
+            <p>{{ movieDetail.releaseDate}}</p>
+            <div *ngFor="let genre of movieDetail.genreList">
+                <li>{{ genre.genre_name }}</li>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4">
+            Summary
+        </div>
+        <div class="col s8">
+            {{ movieDetail.summary }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4">
+            Director & Writer
+        </div>
+        <div class="col s4">
+            <h5>Director</h5>
+            <div *ngFor="let name of movieDetail.directorName">
+                <li>{{ name.director_name }}</li>
+            </div>
+            <h5>Writer</h5>
+            <div *ngFor="let name of movieDetail.writerName">
+                <li>{{ name.writer_name }}</li>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4">
+            Cast & Crew
+        </div>
+        <div class="col s4">
+            <div *ngFor="let name of movieDetail.castList">
+                <li>{{ name.cast_name }}</li>
+            </div>
+        </div>
+    </div>
+</div>
+
