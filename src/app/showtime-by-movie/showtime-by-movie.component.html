@@ -1,1 +1,29 @@
-<p>showtime-by-movie works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col s4"><img class="materialboxed" width="350" src="{{ movieShowTime.posterURL }}">
+                        </div>
+                        <div class="col s8">
+                            <span class="card-title">
+                                <h4>{{ movieShowTime.title }}</h4>
+                            </span>
+                            <p>{{ movieShowTime.runTime }} | {{ movieShowTime.rating }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div class="row">
+                        <div *ngFor="let showtime of movieShowTime.showTime; index as i">
+                            <div class="col s3">
+                                <a class="waves-effect waves-light btn">{{ movieShowTime.showTime[i]["startTime"] }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
