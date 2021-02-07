@@ -1,1 +1,16 @@
-<p>auditorium-one-imax works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let seat of seat">
+            <div class="col s1">
+                <a class="waves-effect waves-light btn" (click)="selectSeat(seat)">{{ seat }}</a>
+            </div>
+        </div>
+    </div>
+    <a class="waves-effect waves-light btn">Continue</a>
+    <div>
+        Seat Selected:
+    </div>
+    <div *ngFor="let seat of seatSelected">
+        {{ seat }}
+    </div>
+</div>
