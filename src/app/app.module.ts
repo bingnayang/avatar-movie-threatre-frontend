@@ -10,6 +10,8 @@ import { ShowtimeComponent } from './showtime/showtime.component';
 import { SeeAMovieComponent } from './see-a-movie/see-a-movie.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.component';
+import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one-imax.component';
+import { TicketTypeComponent } from './ticket-type/ticket-type.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.
     ShowtimeComponent,
     SeeAMovieComponent,
     MovieInfoComponent,
-    ShowtimeByMovieComponent
+    ShowtimeByMovieComponent,
+    AuditoriumOneIMAXComponent,
+    TicketTypeComponent
   ],
   imports: [
     BrowserModule,
