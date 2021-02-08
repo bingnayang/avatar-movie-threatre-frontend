@@ -27,4 +27,8 @@ export class SeeAMovieComponent implements OnInit {
   viewMovieDetail(id: number){
     this.router.navigate(['movie-info',id]);
   }
+  getMovieTicket(id: number){
+    this.router.navigate(['showtime-by-movie',id]);
+  }
+
 }
