@@ -68,6 +68,7 @@ export class AuditoriumOneIMAXComponent implements OnInit {
       })
       console.log("Seat Select: "+seatNumber);
     }
+    localStorage.setItem("seat", JSON.stringify(this.seat));
     console.log(this.seatSelected)
   }
 
