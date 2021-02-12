@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Seat } from '../class/seat';
+import { Movie } from '../class/movie';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-ticket-type',
@@ -6,10 +11,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket-type.component.css']
 })
 export class TicketTypeComponent implements OnInit {
+  id: number;
+  retrievedSeat : Seat[];
+  retrievedData : any;
+  seatsHold : string[] = [];
+  movieInfo: Movie = new Movie;
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    // Get movie info
+    this.movieService.getMovieById(this.id).subscribe(data => {
+      this.movieInfo = data;
+      console.log(this.movieInfo);
+    },error => console.log(error));
+    // Retrieving data and converting it back into an array
+    this.retrievedData = localStorage.getItem("seat");
+    this.retrievedSeat = JSON.parse(this.retrievedData);
+    console.log(this.retrievedSeat)
+    // Push hold seat number to array
+    this.retrievedSeat.forEach(obj => {
+      if(obj.seatAvailable == 'Hold'){
+        this.seatsHold.push(obj.seatNumber);
+      }
+    })
+    console.log(this.seatsHold)
   }
 
 }
