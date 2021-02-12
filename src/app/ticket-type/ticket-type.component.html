@@ -3,9 +3,41 @@
     <p>{{ movieInfo.runTime }} | {{ movieInfo.rating }} </p>
 </div>
 <div class="container">
-Select # Remaining Tickets
+    <h5 class="center-align">Select {{ seatsHold.length }} Remaining Tickets</h5>
+    
 
-<div>Adult</div>
-<div>Child</div>
-<div>Senior</div>
+    <div class="row">
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">+</a>
+        </div>
+        <div class="col s6 center">
+            Adult
+        </div>
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">-</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">+</a>
+        </div>
+        <div class="col s6 center">
+            Child
+        </div>
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">-</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">+</a>
+        </div>
+        <div class="col s6 center">
+            Senior
+        </div>
+        <div class="col s3">
+            <a class="btn waves-effect waves-light btn-small">-</a>
+        </div>
+    </div>
+
 </div>
