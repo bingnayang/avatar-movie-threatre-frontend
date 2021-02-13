@@ -12,6 +12,7 @@ import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.component';
 import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one-imax.component';
 import { TicketTypeComponent } from './ticket-type/ticket-type.component';
+import { OrderCheckoutComponent } from './order-checkout/order-checkout.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TicketTypeComponent } from './ticket-type/ticket-type.component';
     MovieInfoComponent,
     ShowtimeByMovieComponent,
     AuditoriumOneIMAXComponent,
-    TicketTypeComponent
+    TicketTypeComponent,
+    OrderCheckoutComponent
   ],
   imports: [
     BrowserModule,
