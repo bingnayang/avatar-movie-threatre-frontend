@@ -16,6 +16,7 @@ export class TicketTypeComponent implements OnInit {
   retrievedData : any;
   seatsHold : string[] = [];
   movieInfo: Movie = new Movie;
+  orderTicketType : string[] = [];
 
   constructor(private router: Router, private route: ActivatedRoute, private movieService: MovieService) { }
 
@@ -39,4 +40,15 @@ export class TicketTypeComponent implements OnInit {
     console.log(this.seatsHold)
   }
 
+  updateTicket(updateTicket: string, ticketType: string){
+    console.log("UpdateTicket: "+updateTicket+"\n"+"TicketType:"+ticketType)
+    if(updateTicket === 'add ticket'){
+      console.log("Add Ticket Type")
+      this.orderTicketType.push(ticketType);
+    }else{
+      console.log("Remove Ticket Type")
+      this.orderTicketType.indexOf(ticketType) !== -1 && this.orderTicketType.splice(this.orderTicketType.indexOf(ticketType),1)
+    } 
+    console.log(this.orderTicketType)
+  }
 }
