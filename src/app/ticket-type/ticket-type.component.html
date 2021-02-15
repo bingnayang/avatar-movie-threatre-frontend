@@ -6,37 +6,37 @@
     <h5 class="center-align">Select {{ seatsHold.length }} Remaining Tickets</h5>
     
 
-    <div class="row">
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">+</a>
+    <div class="row center-align">
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('add adult ticket')">+</a>
         </div>
-        <div class="col s6 center">
-            Adult
+        <div class="col s2 center">
+            <h4>Adult</h4>
         </div>
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">-</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">+</a>
-        </div>
-        <div class="col s6 center">
-            Child
-        </div>
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">-</a>
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('remove adult ticket')">-</a>
         </div>
     </div>
-    <div class="row">
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">+</a>
+    <div class="row center-align">
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('add child ticket')">+</a>
         </div>
-        <div class="col s6 center">
-            Senior
+        <div class="col s2 center">
+            <h4>Child</h4>
         </div>
-        <div class="col s3">
-            <a class="btn waves-effect waves-light btn-small">-</a>
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('remove child ticket')">-</a>
+        </div>
+    </div>
+    <div class="row center-align">
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('add senior ticket')">+</a>
+        </div>
+        <div class="col s2 center">
+            <h4>Senior</h4>
+        </div>
+        <div class="col s5">
+            <a class="btn waves-effect waves-light btn-small" (click)="updateTicket('remove senior ticket')">-</a>
         </div>
     </div>
 
