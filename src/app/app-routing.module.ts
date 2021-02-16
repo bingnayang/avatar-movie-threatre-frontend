@@ -4,6 +4,7 @@ import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one
 import { FoodAndDrinkComponent } from './food-and-drink/food-and-drink.component';
 import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { OrderCheckoutComponent } from './order-checkout/order-checkout.component';
 import { SeeAMovieComponent } from './see-a-movie/see-a-movie.component';
 import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.component';
 import { ShowtimeComponent } from './showtime/showtime.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'showtime-by-movie/:id', component: ShowtimeByMovieComponent},
   {path: 'ticket-type/:id', component: TicketTypeComponent},
   {path: 'auditorium-one-imax/:id/:starttime_id', component: AuditoriumOneIMAXComponent},
+  {path: 'order-checkout/:id', component: OrderCheckoutComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'}
 ];
 
