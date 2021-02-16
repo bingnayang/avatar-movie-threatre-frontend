@@ -28,4 +28,8 @@ export class HomeComponent implements OnInit {
     console.log(id);
     this.router.navigate(['showtime-by-movie',id]);
   }
+
+  getTickets(){
+    this.router.navigate(['see-a-movie']);
+  }
 }
