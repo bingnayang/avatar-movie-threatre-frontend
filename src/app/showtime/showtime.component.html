@@ -1,4 +1,14 @@
 <div class="container">
+    <div class = "row">
+        <form class = "col s12">
+           <div class = "row">               
+              <label>DatePicker</label>              
+              <input type = "date" class = "datepicker" />    
+           </div>            
+        </form>       
+     </div>
+</div>
+<div class="container">
     <div *ngFor="let movie of movieShowList">
         <div class="col s12 m7">
             <div class="card horizontal">
@@ -21,3 +31,8 @@
         </div>
     </div>
 </div>
+<script>
+      $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
