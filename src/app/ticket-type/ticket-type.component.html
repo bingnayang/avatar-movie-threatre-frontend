@@ -43,5 +43,9 @@
 </div>
 <div class="container">
     <p>{{ orderTicketType.length }} Ticket Selected</p>
-    <button class="waves-effect waves-light btn">Continue</button>
+    <button class="waves-effect waves-light btn" (click)="checkOutOrder(movieInfo.id)">Continue</button>
+
+    <div *ngFor="let ticket of orderTicketType">
+        {{ ticket }}
+    </div>
 </div>

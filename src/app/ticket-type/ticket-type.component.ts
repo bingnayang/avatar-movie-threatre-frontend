@@ -49,6 +49,11 @@ export class TicketTypeComponent implements OnInit {
       console.log("Remove Ticket Type")
       this.orderTicketType.indexOf(ticketType) !== -1 && this.orderTicketType.splice(this.orderTicketType.indexOf(ticketType),1)
     } 
+    console.log("Order Ticket Type")
     console.log(this.orderTicketType)
+  }
+
+  checkOutOrder(id: number){
+    this.router.navigate(['showtime-by-movie',id]);
   }
 }
