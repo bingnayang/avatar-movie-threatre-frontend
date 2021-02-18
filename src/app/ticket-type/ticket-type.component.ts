@@ -17,6 +17,7 @@ export class TicketTypeComponent implements OnInit {
   seatsHold : string[] = [];
   movieInfo: Movie = new Movie;
   orderTicketType : string[] = [];
+  addAdultButtonDisabled : boolean;
 
   constructor(private router: Router, private route: ActivatedRoute, private movieService: MovieService) { }
 
@@ -41,19 +42,17 @@ export class TicketTypeComponent implements OnInit {
   }
 
   updateTicket(updateTicket: string, ticketType: string){
-    console.log("UpdateTicket: "+updateTicket+"\n"+"TicketType:"+ticketType)
+
     if(updateTicket === 'add ticket'){
-      console.log("Add Ticket Type")
       this.orderTicketType.push(ticketType);
     }else{
       console.log("Remove Ticket Type")
-      this.orderTicketType.indexOf(ticketType) !== -1 && this.orderTicketType.splice(this.orderTicketType.indexOf(ticketType),1)
+      this.orderTicketType.indexOf(ticketType) !== -1 && this.orderTicketType.splice(this.orderTicketType.indexOf(ticketType),1);
     } 
-    console.log("Order Ticket Type")
-    console.log(this.orderTicketType)
+    
   }
 
   checkOutOrder(id: number){
-    this.router.navigate(['showtime-by-movie',id]);
+    this.router.navigate(['order-checkout',id]);
   }
 }
