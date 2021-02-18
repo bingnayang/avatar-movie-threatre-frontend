@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Movie } from '../class/movie';
 import { MovieService } from '../movie.service';
 import { Seat } from '../class/seat';
+import { ShowtimeService } from '../showtime.service';
+import { Showtime } from '../class/showtime';
 
 @Component({
   selector: 'app-auditorium-one-imax',
@@ -34,20 +36,25 @@ export class AuditoriumOneIMAXComponent implements OnInit {
     {seatNumber:'C6',seatAvailable:'available'},
     {seatNumber:'C7',seatAvailable:'available'},
   ];
-  
+  showtimeInfo: Showtime = new Showtime;
   seatSelected = [];
   movieInfo: Movie = new Movie;
 
-  constructor(private route: ActivatedRoute,  private router: Router,private movieService: MovieService) { }
+  constructor(private route: ActivatedRoute,  private router: Router,private movieService: MovieService, private showtimeService: ShowtimeService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.starttime_id = this.route.snapshot.params['starttime_id'];
-
+    // Get movie info
     this.movieService.getMovieById(this.id).subscribe(data => {
       this.movieInfo = data;
       console.log(this.movieInfo);
     },error => console.log(error));
+    // Get showtime info
+    this.showtimeService.getShowtime(this.id).subscribe(data => {
+      this.showtimeInfo = data;
+      console.log(this.showtimeInfo);
+    })
   }
 
   selectSeat(seatNumber: string){
