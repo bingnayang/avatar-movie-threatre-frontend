@@ -1,1 +1,27 @@
-<p>order-checkout works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col s8">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="{{ movieInfo.posterURL }}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>{{ movieInfo.title }}</h5>
+                        <p>{{ movieInfo.runTime }}</p>
+                        <p>{{ movieInfo.rating }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <h4>Tickets</h4>
+            <h6>Adult Ticket $12.00</h6>
+            <h6>Child Ticket $9.00</h6>
+            <h6>Seats C9, C10</h6>
+            <hr>
+            <h6>TOTAL $21.00</h6>
+            <button class="waves-effect waves-light btn">Purchase</button>
+        </div>
+    </div>
+</div>
