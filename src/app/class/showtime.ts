@@ -4,4 +4,7 @@ export class Showtime {
     showDate: string;
     showTime: string;
     startTime: string;
+    adultPrice: number;
+    seniorPrice: number;
+    childPrice: number;
 }
