@@ -49,7 +49,8 @@ export class TicketTypeComponent implements OnInit {
       console.log("Remove Ticket Type")
       this.orderTicketType.indexOf(ticketType) !== -1 && this.orderTicketType.splice(this.orderTicketType.indexOf(ticketType),1);
     } 
-    
+    // Save order ticket type to localstorage
+    localStorage.setItem("ticket-type", JSON.stringify(this.orderTicketType));
   }
 
   checkOutOrder(id: number){
