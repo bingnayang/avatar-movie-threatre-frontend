@@ -51,7 +51,7 @@ export class AuditoriumOneIMAXComponent implements OnInit {
       console.log(this.movieInfo);
     },error => console.log(error));
     // Get showtime info
-    this.showtimeService.getShowtime(this.id).subscribe(data => {
+    this.showtimeService.getShowtime(this.starttime_id).subscribe(data => {
       this.showtimeInfo = data;
       console.log(this.showtimeInfo);
     })
