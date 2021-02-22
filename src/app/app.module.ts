@@ -13,6 +13,7 @@ import { ShowtimeByMovieComponent } from './showtime-by-movie/showtime-by-movie.
 import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one-imax.component';
 import { TicketTypeComponent } from './ticket-type/ticket-type.component';
 import { OrderCheckoutComponent } from './order-checkout/order-checkout.component';
+import { AuditoriumStandardComponent } from './auditorium-standard/auditorium-standard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { OrderCheckoutComponent } from './order-checkout/order-checkout.componen
     ShowtimeByMovieComponent,
     AuditoriumOneIMAXComponent,
     TicketTypeComponent,
-    OrderCheckoutComponent
+    OrderCheckoutComponent,
+    AuditoriumStandardComponent
   ],
   imports: [
     BrowserModule,
