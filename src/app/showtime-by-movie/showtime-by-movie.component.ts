@@ -35,6 +35,8 @@ export class ShowtimeByMovieComponent implements OnInit {
 
     if(showtime.auditorium == 'IMAX-3D'){
       this.router.navigate(['auditorium-one-imax',id,showtime.id]);
+    }else{
+      this.router.navigate(['auditorium-standard',id,showtime.id]);
     }
   }
 }
