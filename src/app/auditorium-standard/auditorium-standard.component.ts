@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { MovieService } from '../movie.service';
 import { Movie } from '../class/movie';
+import { Showtime } from '../class/showtime';
+import { ShowtimeService } from '../showtime.service';
 
 @Component({
   selector: 'app-auditorium-standard',
@@ -14,6 +16,8 @@ export class AuditoriumStandardComponent implements OnInit {
   id: number;
   starttime_id: number;
   movieInfo: Movie = new Movie;
+  showtimeInfo: Showtime = new Showtime;
+  
   seat : Seat[] = [
     {seatNumber:'A1',seatAvailable:'available'},
     {seatNumber:'A2',seatAvailable:'available'},
@@ -28,7 +32,7 @@ export class AuditoriumStandardComponent implements OnInit {
     {seatNumber:'B6',seatAvailable:'available'}
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router, private movieService: MovieService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private movieService: MovieService, private showtimeService: ShowtimeService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -38,7 +42,11 @@ export class AuditoriumStandardComponent implements OnInit {
       this.movieInfo = data;
       console.log(this.movieInfo);
     },error => console.log(error));
-
+    // Get showtime info
+    this.showtimeService.getShowtime(this.starttime_id).subscribe(data => {
+      this.showtimeInfo = data;
+      console.log(this.showtimeInfo);
+    })
   }
 
 }
