@@ -17,6 +17,7 @@ export class AuditoriumStandardComponent implements OnInit {
   starttime_id: number;
   movieInfo: Movie = new Movie;
   showtimeInfo: Showtime = new Showtime;
+  seatSelected = [];
   
   seat : Seat[] = [
     {seatNumber:'A1',seatAvailable:'available'},
@@ -49,4 +50,29 @@ export class AuditoriumStandardComponent implements OnInit {
     })
   }
 
+  selectSeat(seatNumber: string){
+    if(this.seatSelected.indexOf(seatNumber) > -1){
+      console.log("Seat already selected")
+      this.seatSelected = this.seatSelected.filter(obj => obj!== seatNumber);
+      this.seat.forEach(function(obj){
+        if(obj.seatNumber === seatNumber){
+          obj.seatAvailable = 'available';
+        }
+      })
+    }else{
+      this.seatSelected.push(seatNumber);
+      this.seat.forEach(function(obj){
+        if(obj.seatNumber === seatNumber){
+          obj.seatAvailable = 'Hold';
+        }
+      })
+      console.log("Seat Select: "+seatNumber);
+    }
+    localStorage.setItem("seat", JSON.stringify(this.seat));
+    console.log(this.seatSelected)
+  }
+
+  selectTicketType(id: number){
+    this.router.navigate(['ticket-type',id]);
+  }
 }
