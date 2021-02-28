@@ -14,6 +14,7 @@ import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one
 import { TicketTypeComponent } from './ticket-type/ticket-type.component';
 import { OrderCheckoutComponent } from './order-checkout/order-checkout.component';
 import { AuditoriumStandardComponent } from './auditorium-standard/auditorium-standard.component';
+import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuditoriumStandardComponent } from './auditorium-standard/auditorium-st
     AuditoriumOneIMAXComponent,
     TicketTypeComponent,
     OrderCheckoutComponent,
-    AuditoriumStandardComponent
+    AuditoriumStandardComponent,
+    ConfirmationPageComponent
   ],
   imports: [
     BrowserModule,
