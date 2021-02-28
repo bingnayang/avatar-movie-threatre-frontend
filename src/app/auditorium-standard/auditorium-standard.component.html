@@ -1,1 +1,27 @@
-<p>auditorium-standard works!</p>
+<div class="container">
+    <h4>{{ movieInfo.title }}</h4>
+    <p>{{ movieInfo.runTime }}</p>
+    <p>{{ showtimeInfo.showDate }} | {{ showtimeInfo.startTime }}</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let seat of seat">
+            <div class="col l3 m6 s6" *ngIf="seat.seatNumber.slice(0,1) === 'A'">
+                <a class="waves-effect waves-light btn" (click)="selectSeat(seat.seatNumber)">{{ seat.seatNumber }} | {{ seat.seatAvailable }}</a>
+            </div>
+            <div class="col l3 m6 s6" *ngIf="seat.seatNumber.slice(0,1) === 'B'">
+                <a class="waves-effect waves-light btn" (click)="selectSeat(seat.seatNumber)">{{ seat.seatNumber }} | {{ seat.seatAvailable }}</a>
+            </div>
+            <div class="col l3 m6 s6" *ngIf="seat.seatNumber.slice(0,1) === 'C'">
+                <a class="waves-effect waves-light btn" (click)="selectSeat(seat.seatNumber)">{{ seat.seatNumber }} | {{ seat.seatAvailable }}</a>
+            </div>
+        </div>
+    </div>
+    <a class="waves-effect waves-light btn" (click)="selectTicketType(id)">Continue</a>
+    <div>
+        Seat Selected:
+    </div>
+    <div *ngFor="let seat of seatSelected">
+        {{ seat }}
+    </div>
+</div>
