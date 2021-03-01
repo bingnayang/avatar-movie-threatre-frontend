@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuditoriumOneIMAXComponent } from './auditorium-one-imax/auditorium-one-imax.component';
 import { AuditoriumStandardComponent } from './auditorium-standard/auditorium-standard.component';
+import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { FoodAndDrinkComponent } from './food-and-drink/food-and-drink.component';
 import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'auditorium-one-imax/:id/:starttime_id', component: AuditoriumOneIMAXComponent},
   {path: 'auditorium-standard/:id/:starttime_id', component: AuditoriumStandardComponent},
   {path: 'order-checkout/:id', component: OrderCheckoutComponent},
+  {path: 'confirmation-page', component: ConfirmationPageComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'}
 ];
 
